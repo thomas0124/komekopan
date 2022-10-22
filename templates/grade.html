@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="/static/styles.css" rel="stylesheet">
+    <title>情報リテラシー解説サイト</title>
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function ShowLength(str) {
+            document.getElementById("inputlength").innerHTML = str.length + "文字";
+        }
+    </script>
+
+    <div class="header">
+        <h1>クイズの解説サイト</h1>
+        <h3 class="text-white pt-1"><span class="auto-input"></span></h3>
+    </div>
+
+    <div class="container">
+        <div class="section">
+
+            <h2>疑似体験問題解説サイト</h2>
+            <table class="price">
+                <thead>
+                    <tr>
+                        <th class="c2">問題</th>
+                        <th class="c3">解説</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cnt3 in range(50) %}
+                    <tr>
+                        <td class="c2">問題{{cnt3+1}}</td>
+                        <td class="c3">{{kaisetu[cnt3]}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script>
+        let typed = new Typed(".auto-input", {
+            strings: ["by まもるくん"],
+            typeSpeed: 140,
+            backSpeed: 50,
+            loop: true,
+        });</script>
+</body>
+
+</html>
